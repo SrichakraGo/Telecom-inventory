@@ -17,5 +17,8 @@ app.use('/api/locations', locations);
 app.use('/api/asset-types', assetTypes);
 app.use('/api/assets', assetRoutes);
 
-const PORT = 4000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
+
